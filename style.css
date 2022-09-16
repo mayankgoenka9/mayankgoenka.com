@@ -315,7 +315,7 @@ body{
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
-    border: 1px solid var(--yellow);
+    border: 2px solid var(--yellow);
     border-radius: 30px;
     transition: 0.5s;
 }
@@ -942,15 +942,21 @@ body{
         grid-template-columns: auto;  /* Add auto to add column or vice-versa*/
         grid-template-rows: auto auto auto auto; 
     }
-    .projects .card{
-        scale: 0.8;
+    .projects .card .content .name{
+        font-size: 1rem;
+        top: -10%;
     }
-    .projects .card .content {
+    .projects .card .content .btn{
         scale: 0.7;
+        top: -22%;
     }
-    .projects .card:hover .content{
-        transform: translateY(-120%);
+    .projects .card .content .tech-stack{
+        font-size: 0.4rem;
+        top: -70%;
+        line-height: 10px;
+        margin: 5px 0;
     }
+
     .skills{
         width: 100vw;
         left: 0;
@@ -968,9 +974,6 @@ body{
         width: 100vw;
         left: 0;
     }
-    /* .about > *{
-        scale: 0.8;
-    } */
     .about .walking{
         width: 40%;
         left: 0;
@@ -1031,5 +1034,225 @@ body{
     .connect{
         width: 100vw;
         left: 0;
+    }
+    .connect .coffeeImage{
+        width: 25%;
+        top: 10px;
+    }
+    .connect h1{
+        font-size: 2rem;
+    }
+    .connect ul{
+        gap: 0;
+        display: inline-block;
+        top: -10px;
+        margin-left: 30px;
+    }
+    .connect ul li{
+        scale: 0.8;
+    }
+    .connect ul li .qr img{
+        top: 40%;
+    }
+    .connect ul li:hover .qr img{
+        right: -70%;
+        top: 30%;
+        width: 60%;
+        height: 60%;
+    }
+    .connect p{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+    .connect p ion-icon {
+        position: absolute;
+        margin-right: 10px;
+        right: 7%;
+        top: 35px;
+        color: var(--yellow);
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px){
+    .navigation{
+        display: none;
+    }
+    .toggle{
+        width: 70px;
+        height: 70px;
+    }
+    .toggle .icon ion-icon{
+        font-size: 2.5rem;
+    }
+    .theme-change-text{
+        font-size: 2.5rem;
+        top: -10px;
+        left: 40px;
+    }
+    .theme-switch{
+        left: 20px;
+    }
+    .container{
+        width: 100vw;
+        left: 0;
+    }
+    .home{
+        width: 100vw;
+        left: 0;
+    }
+    .home .download-resume{
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        left: 28%;
+        top: 70%;
+    }
+    .home h1 {
+        font-size: 1.2rem;
+        letter-spacing: 25px;
+        top: 120px;
+    }
+    
+    .home h1 span{
+        font-size: 8rem;
+        line-height: 200px;
+        top: 40px;
+        letter-spacing: 30px;
+    }
+    .home p{
+        font-size: 3rem;
+        bottom: -10%;
+    }
+
+    .projects{
+        width: 100vw;
+        left: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto; 
+        overflow-y: scroll;
+    }
+    .projects .card{
+        height: 500px;
+    }
+    .projects .card:hover .content{
+        transform: translateY(-70%);
+    }
+
+    .skills{
+        width: 100vw;
+        left: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .skills .types{
+        height: 400px;
+    }
+    .skills .types .skill{
+        scale: 1.2;
+    }
+    .about{
+        width: 100vw;
+        left: 0;
+    }
+    .about .next,.about .prev{
+        right: 20px;
+        bottom: 10px;
+        font-size: 3rem;
+    }
+    .about .prev{
+        right: 100px;
+    }
+    .about .walking{
+        width: 25%;
+        left: 30%;
+    }
+    .about .timeline .stop{
+        scale: 0.9;
+        top: 50px;
+        margin: 0;
+        margin: 0 -10px 60px 10px;
+        width: 400px;
+    }
+    .about .timeline .stop:first-child{
+        margin-left: 10px;
+    }
+    .about .timeline .stop:last-child{
+        margin-right: 0;
+    }
+    .about .timeline .stop:nth-child(even){
+        animation: cardHoverOdd 4s linear infinite;
+    }
+    .about .timeline .stop:nth-child(even) h2{
+        top: 105%;
+    }
+    .about .timeline .stop:hover .logo{
+        width: 400px;
+        height: 600px;
+    }
+    .about .timeline .stop .logo .details{
+        width: 400px;
+        line-height: 20px;
+        padding: 24px;
+    }
+    .about .timeline .stop .logo .details .extraImage {
+        width: 40%;
+        position: absolute;
+    }
+    .about .timeline .stop .logo .details .extraImage.psl{
+        display: none;
+    }
+    .about .timeline .stop .logo .details .academic-intern{
+        padding-right: 0;
+    }
+    .about .timeline .stop .logo .details #marks,#yoe{
+        position: absolute;
+        font-size: 4rem;
+        font-family: 'Poiret One', cursive;
+        left: 25%;
+        top: -90%;
+    }
+    .about .timeline .stop .logo .details #yoe{
+        left: 35%;
+    }
+    .about .timeline .stop:hover img.imageLogo{
+        scale: 0.2;
+        transform: translateY(-200%);
+    }
+
+    .connect{
+        width: 100vw;
+        left: 0;
+    }
+    .connect .coffeeImage{
+        width: 28%;
+        top: 10px;
+    }
+    .connect h1{
+        font-size: 4rem;
+        top: -90px;
+    }
+    .connect ul{
+        gap: 70px;
+    }
+    .connect ul li{
+        scale: 1.3;
+    }
+    .connect ul li:hover .qr img{
+        top: -90%;
+        width: 70%;
+        height: 70%;
+    }
+    .connect p{
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 0 100px;
+        bottom: -110px;
+    }
+    .connect p ion-icon {
+        position: absolute;
+        font-size: 3rem;
+        right: 28%;
+        top: 55px;
+        color: var(--yellow);
     }
 }
