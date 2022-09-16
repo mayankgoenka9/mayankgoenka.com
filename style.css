@@ -968,6 +968,7 @@ body{
     }
     .skills .types{
         scale: 0.8;
+        transform: translateX(-10px);
     }
 
     .about{
