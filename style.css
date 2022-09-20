@@ -1012,7 +1012,7 @@ body{
     .about .timeline .stop{
         margin: 0;
         width: 400px;
-        transition: 1s;
+        transition: 0.5s;
     }
     .about .timeline .stop:first-child{
         margin-left: 0;
