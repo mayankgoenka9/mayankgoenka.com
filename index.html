@@ -189,7 +189,7 @@
                             </div>
                         </div>
                         <div class="content">
-                            <div class="name">My Oranizer</div>
+                            <div class="name">My Organizer</div>
                             <a target="_blank" href="https://github.com/mayankgoenka9/my_organizer" class="btn">See Project</a>
                             <div class="tech-stack">python | pyqt | css</div>
                         </div>
@@ -205,8 +205,8 @@
                             <span>python</span>
                         </div>
                         <div class="skill" style="--clr:#5766B6">
-                            <i class="fa-solid fa-c"></i>
-                            <span>C</span>
+                            <i class="fa-brands fa-golang"></i>
+                            <span>golang</span>
                         </div>
                         <div class="skill" style="--clr:#E56027">
                             <i class="fa-brands fa-html5"></i>
@@ -222,13 +222,25 @@
                         </div>
                         <div class="skill" style="--clr:pink">
                             <i class="fa-solid fa-file-code"></i>
-                            <span>C++</span>
+                            <span>C/C++</span>
                         </div>
                     </div>
                 </div>
                 <div class="types">
                     <h2>Frameworks</h2>
                     <div>
+                        <div class="skill" style="--clr:#f0b900">
+                            <i class="fa-brands fa-aws"></i>
+                            <span>golang aws sdk</span>
+                        </div>
+                        <div class="skill" style="--clr:#fff">
+                            <i class="fa-brands fa-aws"></i>
+                            <span>boto</span>
+                        </div>
+                        <div class="skill" style="--clr:#fff">
+                            <i class="fa-brands fa-golang"></i>
+                            <span>go mocks</span>
+                        </div>
                         <div class="skill" style="--clr:#439D49">
                             <i class="fa-brands fa-python"></i>
                             <span>django</span>
@@ -240,15 +252,6 @@
                         <div class="skill" style="--clr:#6E10EE">
                             <i class="fa-brands fa-bootstrap"></i>
                             <span>bootstrap</span>
-                        </div>
-                        <div class="skill blank" style="--clr:#fff">
-                            <i class="fa-brands fa-stack-overflow"></i>
-                        </div>
-                        <div class="skill blank" style="--clr:#fff">
-                            <i class="fa-brands fa-stack-overflow"></i>
-                        </div>
-                        <div class="skill blank" style="--clr:#fff">
-                            <i class="fa-brands fa-stack-overflow"></i>
                         </div>
                     </div>
                 </div>
@@ -316,10 +319,24 @@
                 </div>
                 <img class="walking" src="images/undraw_dog_walking_light.svg" alt="walking">
                 <div class="timeline">
+                    <div class="stop" style="--clr:#fff">
+                        <div class="logo" style="--clr:#fff">
+                            <img src="images/aws-logo.png" alt="Amazon Web Services" class="imageLogo">
+                            <div class="details aws" style="color:#121212">
+                                <h1 id="yoe" style="color:#121212"></h1>
+                                <span class="title" style="color:#121212">AWS Cloud Practitioner Certified</span><br><br><br>
+                                <span id="desc">NHFJG50CR1BQ12WY</span>
+                                <br><br>
+                                <span id="link"><a href="https://aws.amazon.com/verification" target="_blank">Verify</a></span>
+                                <img src="images/undraw_cloud_hosting_7xb1.svg" alt="aws" class="extraImage psl" onload="calculateYOE('feb',2023, 'aws')">
+                            </div>
+                        </div>
+                        <h2>2023</h2>
+                    </div>
                     <div class="stop" style="--clr:#171717">
                         <div class="logo" style="--clr:#171717">
                             <img src="images/persistent-logo.svg" alt="Persistent Systems" class="imageLogo">
-                            <div class="details">
+                            <div class="details psl">
                                 <h1 id="yoe" style="top: -19%;"></h1>
                                 <span class="title">Persistent Systems, Pune</span><br><br>
                                                  Software Engineer (July 2022 - Present)<br><br>
@@ -327,7 +344,7 @@
                                                  <br><br>
                                                  Academic Intern (Feb 2022 - July 2022)<br><br>
                                                  <span class="academic-intern" id="desc">Went through an intense internship program where I got to learn about various technology concepts in depth.</span><br>
-                                <img src="images/undraw_cloud_hosting_7xb1.svg" alt="persistent" class="extraImage psl" onload="calculateYOE('feb',2022)">
+                                <img src="images/undraw_cloud_hosting_7xb1.svg" alt="persistent" class="extraImage psl" onload="calculateYOE('feb',2022, 'psl')">
                             </div>
                         </div>
                         <h2>2022</h2>
@@ -561,7 +578,7 @@
         //###############################################################################################################
         //######################### Years Of Experience Calculator for about section ####################################
         // window.addEventListener("load",calculateYOE("feb",2022));
-        function calculateYOE(m,y) {
+        function calculateYOE(m,y, place) {
             var now = new Date();
             currMonth = now.getMonth();
             currYear = now.getFullYear();
@@ -579,7 +596,9 @@
                 "nov": 10,
                 "dec": 11 
             }
-            let yoePlaceholder = document.querySelector("#yoe");
+            let x = ".details." + place
+            let yoeDiv = document.querySelector(x)
+            let yoePlaceholder = yoeDiv.querySelector("#yoe");
             var startedMonth = monthMap[m];
             var startedYear = y;
             yearDiff = Math.abs(currYear - startedYear);

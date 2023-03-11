@@ -541,28 +541,6 @@ body{
     left: 11%;
     filter: brightness(95%);
 }
-/* .about .day.moon{
-    position: absolute;
-    font-size: 5rem;
-    right: 30%;
-    top: 5%;
-    transition: 3s ease;
-}
-.about .day.moon ion-icon{
-    color: #fff;
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 60px #fff);
-}
-.about .day.sun{
-    position: absolute;
-    font-size: 5rem;
-    right: 30%;
-    top: 5%;
-    transition: 3s ease;
-}
-.about .day.sun ion-icon{
-    color: #FDB813;
-    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 400px #FDB813) drop-shadow(0 0 40px #FDB813);
-} */
 .about .next,.about .prev{
     position: absolute;
     background: none;
@@ -691,6 +669,10 @@ body{
 }
 .about .timeline .stop .logo .details .academic-intern{
     padding-right: 200px;
+}
+.about .timeline .stop .logo .details span#link a{
+    text-decoration: none !important;
+    color: var(--highlight);
 }
 .about .timeline .stop:hover .logo .details{
     opacity: 100%;
